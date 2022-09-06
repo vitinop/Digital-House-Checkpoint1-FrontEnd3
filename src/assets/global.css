@@ -25,46 +25,6 @@ body {
     width: 100vw;
 }
 
-.l-sidebar {
-    background-color: black;
-    height: 100vh;
-    padding: 100px 25px 0;
-    position: fixed;
-    min-width: 250px;
-    top: 0;
-    left: 0;
-    transform: translateX(-250px);
-    width: 250px;
-    z-index: 1;
-}
-
-.l-sidebar::after {
-    color: white;
-    content: "fechar";
-    font-family: Arial Black, Arial, sans-serif;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
-.l-sidebar__btn {
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    position: fixed;
-    margin: 50px;
-}
-
-.l-sidebar--open {
-    transition: all .5s;
-    transform: translateX(0);
-}
-
-.l-sidebar--close {
-    transition: all .5s;
-    transform: translateX(-250px);
-}
 
 
 .l-logo {
@@ -83,7 +43,7 @@ body {
 }
 
 .bg__profile {
-    background-image: url("./images/profile.webp");
+    background-image: url("../images/perfiledit2.png");
     background-repeat: no-repeat;
     background-position: top right;
 }
