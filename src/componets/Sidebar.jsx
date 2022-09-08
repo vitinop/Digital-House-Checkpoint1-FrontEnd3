@@ -1,10 +1,24 @@
 import React, { useState } from "react";
-import CloseIcon from '@mui/icons-material/Close';
-import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 
 function Sidebar() {
+ 
+
+  document.addEventListener("keydown",(e)=>{ 
+    let barState= estadoAtualSideBar ==="--open" ? "" : "--open" 
+    if (e.target != document.querySelector("body") || e.code != "Space")  return
+    e.preventDefault()
+    alterarEstadoSideBar(barState)
+  })  
+
+
+  document.addEventListener("dblclick",(e)=>{ 
+    e.preventDefault()
+    alterarEstadoSideBar("")
+  })  
   const [estadoAtualSideBar, alterarEstadoSideBar] = useState("");
-  console.log(estadoAtualSideBar);
+
   return (
     <div>
       <button
@@ -12,21 +26,26 @@ function Sidebar() {
         type="button"
         onClick={() => alterarEstadoSideBar("--open")}
       >
-        <MenuIcon/>
+        <MenuIcon />
       </button>
 
       <div className={`l-sidebar${estadoAtualSideBar}`}>
-      <button type="button" class="button-Close" aria-label="Close"
-      onClick={() => alterarEstadoSideBar('')}
-      > <CloseIcon/></button>
+        <button
+          type="button"
+          className="button-Close"
+          aria-label="Close"
+          onClick={() => alterarEstadoSideBar("")}
+        >
+          
+          <CloseIcon />
+        </button>
         <div>
-        
           <h1 className="l-logo">Victor Luz</h1>
-          <nav className="c-sidebar">
-            <a className="c-nav__item" href="#sobre-mim">
+          <nav className="sidebar__text">
+            <a className="sidebar__item " href="#sobre-mim">
               Sobre mim
             </a>
-            <a className="c-nav__item" href="#contatos">
+            <a className="sidebar__item " href="#contatos">
               Contatos
             </a>
           </nav>
