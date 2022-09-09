@@ -5,7 +5,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SendIcon from "@mui/icons-material/Send";
 import { useState } from "react";
 import profileIMG from "./componets/images/profileIMG.png";
-import Footer from "./componets/footer";
+import project1 from "./componets/images/project1.jpg";
+import project2 from "./componets/images/project2.jpg";
+import project3 from "./componets/images/project3.jpg";
+import project4 from "./componets/images/project4.jpg";
+import Footer from "./componets/Footer";
 
 function App() {
   const valoresIniciais = { name: "", email: "", subject: "", messager: "" };
@@ -27,9 +31,9 @@ function App() {
       <Sidebar />
       {/* <!-- Sessão Principal --> */}
       <div className="wcSection">
-        <main className="welcomeSection">
+        <main className="welcomeSection focus-in-expand">
           <div>
-            <h1 className="title">Olá, sou Victor luz</h1>
+            <h1 className="title focus-in-expand">Olá, sou Victor luz</h1>
             <h3 className="subtitle">
               Sou desenvolvedor Jr web Full-stack
             </h3>
@@ -62,7 +66,7 @@ function App() {
       {/* <!-- Sessão Sobre mim --> */}
       <div className="l-page" id="sobre-mim">
       <article className="aboutText">
-              <h1 className="title" id="sobre-mim">
+              <h1 className="title tracking-in-expand-fwd-bottom" id="sobre-mim">
                 Sobre mim
               </h1>
               <p>
@@ -102,19 +106,37 @@ function App() {
 
           <div className="containerCards">
             <div className="cardInd">
-              <img
-                src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            <a href="https://digital-house-checkpoint2-frontend.vercel.app/"><img
+                src={project1}
                 alt=""
-              />
-              <figcaption>Título</figcaption>
+              /></a>
+              <figcaption>DH-Flix</figcaption>
+            </div>
+
+            
+            
+            <div className="cardInd">
+            <a href="https://vitinop.github.io/Digital-House-Checkpoint1-Frontend/"><img
+                src={project2}
+                alt=""
+              /></a>
+              <figcaption>Conheça Ouro Preto</figcaption>
             </div>
 
             <div className="cardInd">
-              <img
-                src="https://images.unsplash.com/photo-1569390173732-5c735072c80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            <a href="https://digital-house-checkpoint1-front-end2.vercel.app/"><img
+                src={project3}
                 alt=""
-              />
-              <figcaption>Título</figcaption>
+              /></a>
+              <figcaption>Game Cards</figcaption>
+            </div>
+
+            <div className="cardInd">
+            <a href="https://github.com/vitinop/Projeto-ficcao-interativa-Blue"><img
+                src={project4}
+                alt=""
+              /></a>
+              <figcaption>Jogo MyCrab</figcaption>
             </div>
           </div>
         </article>

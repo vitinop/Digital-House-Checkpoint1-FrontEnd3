@@ -97,12 +97,7 @@ Sessão social - Estilização
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
     -ms-border-radius: 200px;
-    -o-border-radius: 200px;
-    
-
-    
-
-    
+    -o-border-radius: 200px;    
 }
 
 
@@ -116,6 +111,8 @@ Sessão Sobre mim - Estilização
     text-align: justify;
 }
 
+.focus-in-expand{animation:focus-in-expand .8s cubic-bezier(.25,.46,.45,.94) both}
+@keyframes focus-in-expand{0%{letter-spacing:-.5em;filter:blur(12px);opacity:0}100%{filter:blur(0);opacity:1}}
 /*
 Sessão skills - Estilização
 */
@@ -130,7 +127,20 @@ Sessão skills - Estilização
 
 }
 .iconsTecnologias img {
+    height: auto;    
     width: 80px;
+}
+.iconsTecnologias img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
 }
 
 /*
@@ -150,8 +160,8 @@ Sessão Portifólio - Estilização
 .cardInd{
     display: inline-block;
     position: relative;
-    width: 200px;
-    height: 300px;
+    max-width: 350px;
+    max-height: 197px;
     
 }
 .cardInd figcaption{
